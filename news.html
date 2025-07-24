@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News about Madras Fintech - Madras Fintech Services Pvt. Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --deep-blue: #153a6e;
+            --accent-orange: #ff8c42;
+            --accent-green: #3ecf8e;
+            --accent-yellow: #ffd600;
+            --background: #f7fafd;
+            --section-bg: #f2f6fa;
+            --card-bg: #fff;
+            --shadow: 0 6px 32px rgba(30, 42, 73, 0.10);
+        }
+        html, body {
+            background: var(--background);
+            font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
+            color: #1a2947;
+            min-height: 100vh;
+        }
+        .header {
+            background: #fff;
+            color: var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(26,115,232,0.06);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 0 1.1rem 0;
+        }
+        .nav > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .nav img {
+            height: 44px;
+            width: 44px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.10);
+            margin-right: 14px;
+        }
+        .nav span {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+        }
+        .nav-links a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            color: var(--accent-orange);
+        }
+        .nav-links a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.2s;
+        }
+        .nav-links a:hover::after, .nav-links a:focus::after {
+            width: 80%;
+        }
+        main {
+            margin-top: 0;
+        }
+        .news-main {
+            padding: 4rem 0 2rem 0;
+        }
+        .news-main h1 {
+            font-size: 2.3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .news-card {
+            position: relative;
+            background: transparent;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(26, 115, 232, 0.10);
+            font-size: 1.08rem;
+            color: #222;
+            text-align: left;
+            padding: 1.5rem 1.2rem;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-orange));
+            border-radius: 18px 18px 0 0;
+            z-index: 2;
+        }
+        .news-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+        .news-card > * {
+            position: relative;
+            z-index: 3;
+        }
+        .news-card strong {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        footer {
+            background: var(--deep-blue);
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent-green);
+        }
+        footer strong {
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        footer a {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .container { padding: 0 10px; }
+            .nav span { font-size: 1.3rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav img { height: 36px; width: 36px; }
+            .news-card { padding: 1.2rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+                    <img src="logo.png" alt="MFS Logo" style="height:44px;width:44px;margin-right:14px;">
+                    <span style="font-size:1.7rem;font-weight:700;color:var(--primary-blue);letter-spacing:0.5px;">Madras Fintech Services Pvt. Ltd</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="our-projects.html">Our Projects</a>
+                    <a href="#contact-footer">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="news-main container">
+        <h1>News about Madras Fintech</h1>
+        <div class="news-list">
+            <div class="news-card"><div>The Bureau of Indian Standards has awarded a project titled “Study for Management of Mobile Applications’ Permissions” to MFS.</div></div>
+            <div class="news-card"><div>Gautham Sekar was part of the Indian delegation for ISO/IEC JTC 1/SC 27 “Information security, cybersecurity and privacy protection” Working Group meetings in April 2024. He was proposed as a Co-Editor for a PWI on new lightweight asymmetric cryptographic techniques.</div></div>
+            <div class="news-card"><div>Gautham Sekar was part of the Indian delegation for ISO/IEC JTC 1/SC 27 “Information security, cybersecurity and privacy protection” Working Group meetings in April 2023.</div></div>
+            <div class="news-card"><div>The Madras School of Economics signed an MoU with MFS on 6th April 2023.</div></div>
+            <div class="news-card"><div>The National Power Training Institute, India, collaborated with MFS to offer a webinar on “Cyber Security Issues & Challenges in Smart Power Systems” in April 2022.</div></div>
+            <div class="news-card"><div>Gautham Sekar was part of the Indian delegation for ISO/IEC JTC 1/SC 27 “Information security, cybersecurity and privacy protection” meetings in April 2022. He was the only representative of India at the “Cryptography and security mechanisms” Working Group (WG 2) meetings.</div></div>
+            <div class="news-card"><div>Chennai Business School partnered with MFS to offer a webinar on Data Science and Security.</div></div>
+            <div class="news-card"><div>MFS participated as an Invitee in the 21st meeting of the Information Systems Security and Privacy Sectional Committee (LITD 17) of the Bureau of Indian Standards. In the meeting, MFS was co-opted as a Member of LITD 17 / Panel 6.</div></div>
+            <div class="news-card"><div>Gautham Sekar was a Distinguished Speaker at the “Data Science and Security Primer” webinar series held during 18th-20th August 2021 as part of the Government of India “Azadi Ka Amrit Mahotsav” initiative.</div></div>
+            <div class="news-card"><div>Soumyadeep Bhattacharya was a Distinguished Speaker at the “Data Science and Security Primer” webinar series held during 18th-20th August 2021 as part of the Government of India “Azadi Ka Amrit Mahotsav” initiative</div></div>
+            <div class="news-card"><div>MFS participated as an Invitee in the 19th meeting of the Information Systems Security and Privacy Sectional Committee (LITD 17) of the Bureau of Indian Standards.</div></div>
+            <div class="news-card"><div>Gautham Sekar delivered a guest lecture titled, “Using Decision Trees in Decision Making”, for the National Productivity Council, India, on 30th September 2020.</div></div>
+            <div class="news-card"><div>Gautham Sekar delivered a guest lecture titled, “Fundamentals of Decision Theory”, for the National Productivity Council, India, on 16th September 2020.</div></div>
+            <div class="news-card"><div>Aryan Jaiswal completed an internship titled “Analysis of Microdeposit Schemes and Their Digitisation” in July 2023.</div></div>
+            <div class="news-card"><div>Tanushree Pal completed an internship titled “Survey of NRI Facilities Offered by Indian Banks” in July 2023.</div></div>
+        </div>
+    </main>
+    <footer id="contact-footer">
+        <div class="container">
+            <p>© 2025 Madras Fintech Services Private Ltd. All rights reserved.</p>
+            <div style="margin-top:1.2rem;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;">
+                <strong>CONTACT US</strong><br>
+                Address: Plot No. 14, F1, Syndicate Bank Colony<br>
+                Narayanapuram, Pallikaranai<br>
+                Chennai 600100, INDIA<br>
+                Phone: +91-8056267430<br>
+                E-mail: <a href="mailto:madrasfintech@gmail.com" style="color:inherit;text-decoration:underline;">madrasfintech@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Publications - Madras Fintech Services Pvt. Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --deep-blue: #153a6e;
+            --accent-orange: #ff8c42;
+            --accent-green: #3ecf8e;
+            --accent-yellow: #ffd600;
+            --background: #f7fafd;
+            --section-bg: #f2f6fa;
+            --card-bg: #fff;
+            --shadow: 0 6px 32px rgba(30, 42, 73, 0.10);
+        }
+        html, body {
+            background: var(--background);
+            font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
+            color: #1a2947;
+            min-height: 100vh;
+        }
+        .header {
+            background: #fff;
+            color: var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(26,115,232,0.06);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 0 1.1rem 0;
+        }
+        .nav > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .nav img {
+            height: 44px;
+            width: 44px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.10);
+            margin-right: 14px;
+        }
+        .nav span {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+        }
+        .nav-links a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            color: var(--accent-orange);
+        }
+        .nav-links a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.2s;
+        }
+        .nav-links a:hover::after, .nav-links a:focus::after {
+            width: 80%;
+        }
+        main {
+            margin-top: 0;
+        }
+        .publications-main {
+            padding: 4rem 0 2rem 0;
+        }
+        .publications-main h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .pub-card {
+            position: relative;
+            background: transparent;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(26, 115, 232, 0.10);
+            border: 1.5px solid rgba(30, 42, 73, 0.10);
+            padding: 2.2rem 1.5rem;
+            overflow: hidden;
+        }
+        .pub-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-orange));
+            border-radius: 18px 18px 0 0;
+            z-index: 2;
+        }
+        .pub-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+        .pub-card > * {
+            position: relative;
+            z-index: 3;
+        }
+        .pub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        .pub-authors {
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 0.3rem;
+        }
+        .pub-journal {
+            font-size: 0.98rem;
+            color: #555;
+            margin-bottom: 0.7rem;
+        }
+        .pub-summary {
+            font-size: 1.05rem;
+            color: #444;
+        }
+        .pub-link {
+            color: var(--primary-blue);
+            text-decoration: underline;
+            font-size: 0.98rem;
+        }
+        footer {
+            background: var(--deep-blue);
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent-green);
+        }
+        footer strong {
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        footer a {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .container { padding: 0 10px; }
+            .nav span { font-size: 1.3rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav img { height: 36px; width: 36px; }
+            .pub-card { padding: 1.2rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+                    <img src="logo.png" alt="MFS Logo" style="height:44px;width:44px;margin-right:14px;">
+                    <span style="font-size:1.7rem;font-weight:700;color:var(--primary-blue);letter-spacing:0.5px;">Madras Fintech Services Pvt. Ltd</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="our-projects.html">Our Projects</a>
+                    <a href="#contact-footer">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="publications-main container">
+        <h1>Our Publications</h1>
+        <div class="pub-list">
+            <div class="pub-card">
+                <div class="pub-title">Fault–Assisted Side Channel Analysis of HMAC-Streebog, Cryptologia. (Accepted)</div>
+                <div class="pub-authors">Gautham Sekar, Mabin Joseph, R. Balasubramanian</div>
+                <div class="pub-summary">Streebog is a family of hash functions defined in the Russian cryptographic standard GOST R 34.11–2012. HMAC–Streebog, which is defined in RFC 7836, is a family of Streebog-based message authentication codes. The paper presents fault–assisted side channel attacks on HMAC–Streebog that can recover the keys in real-time with a 95% success rate.</div>
+            </div>
+            <div class="pub-card">
+                <div class="pub-title">Revisiting the Security of the Software-Efficient Stream Ciphers RCR–64 and RCR–32, The Computer Journal, vol. 67(4), pp. 1590-1602, 2024.</div>
+                <div class="pub-authors">Mabin Joseph, Gautham Sekar, R. Balasubramanian</div>
+                <div class="pub-summary">The synchronous stream ciphers RCR-64 and RCR-32 designed by Sekar, Paul and Preneel are strengthened variants of the ciphers TPy and TPypy (designed by Biham and Seberry), respectively. The RCR ciphers have remained unbroken since they were published in 2007. In this paper, we present arguments that not only support the designers’ security claims but suggest, in general, that the ciphers are secure against several classes of cryptanalytic attacks. We find that the ciphers are best used with 256-bit keys and 384-bit IVs. We also suggest ways to protect software implementations of the RCR ciphers against (cache-)timing and processor flag attacks. Our performance evaluation suggests that the protected implementation of the RCR-64 encrypts long messages at speeds comparable to some of the fastest stream ciphers available today. Consequently, we find that the RCR ciphers may be well suited for PC-based applications in general and streaming audio / video applications in particular. This is the first paper to present a detailed study on the security and performance of the RCR ciphers.</div>
+            </div>
+            <div class="pub-card">
+                <div class="pub-title">On the Security of the Stream Ciphers RCR–64 and RCR–32, The Computer Journal, vol. 65(12), pp. 3091-3099, 2022.</div>
+                <div class="pub-authors">Mabin Joseph, Gautham Sekar, R. Balasubramanian, G. Venkiteswaran</div>
+                <div class="pub-summary">The stream ciphers RCR–64 and RCR–32 designed by Sekar et al. are the most recent additions to the Py–family of stream ciphers, originally designed by Biham et al. The ciphers are among the fastest stream ciphers on software. To the best of our knowledge, the only reported attacks on the ciphers are due to Ding et al., published in the Journal of Universal Computer Science. In this paper, we review these alleged attacks on the RCR ciphers and show that they are based on non-existent keystream biases stemming from flawed probability calculations. <a class="pub-link" href="https://doi.org/10.1093/comjnl/bxab128" target="_blank">Read more</a></div>
+            </div>
+            <div class="pub-card">
+                <div class="pub-title">Side Channel Analysis of SPECK, Journal of Computer Security, vol. 28(6), pp. 655-676, 2020.</div>
+                <div class="pub-authors">Mabin Joseph, Gautham Sekar and R. Balasubramanian</div>
+                <div class="pub-summary">SPECK is a family of lightweight block ciphers developed by Beaulieu et al. of the US National Security Agency (NSA) for the Internet of Things (IoT). SPECK has been standardised by ISO/IEC for radio frequency identification (RFID) devices. The paper presents carry flag attacks on the full SPECK ciphers. <a class="pub-link" href="https://content.iospress.com/articles/journal-of-computer-security/jcs200021" target="_blank">Read more</a></div>
+            </div>
+        </div>
+    </main>
+    <footer id="contact-footer">
+        <div class="container">
+            <p>© 2025 Madras Fintech Services Private Ltd. All rights reserved.</p>
+            <div style="margin-top:1.2rem;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;">
+                <strong>CONTACT US</strong><br>
+                Address: Plot No. 14, F1, Syndicate Bank Colony<br>
+                Narayanapuram, Pallikaranai<br>
+                Chennai 600100, INDIA<br>
+                Phone: +91-8056267430<br>
+                E-mail: <a href="mailto:madrasfintech@gmail.com" style="color:inherit;text-decoration:underline;">madrasfintech@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

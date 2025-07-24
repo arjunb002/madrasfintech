@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Madras Fintech Services Pvt. Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --deep-blue: #153a6e;
+            --accent-orange: #ff8c42;
+            --accent-green: #3ecf8e;
+            --accent-yellow: #ffd600;
+            --background: #f7fafd;
+            --section-bg: #f2f6fa;
+            --card-bg: #fff;
+            --shadow: 0 6px 32px rgba(30, 42, 73, 0.10);
+        }
+        html, body {
+            background: var(--background);
+            font-family: 'Inter', 'Nunito Sans', Arial, sans-serif;
+            color: #1a2947;
+            min-height: 100vh;
+        }
+        .header {
+            background: #fff;
+            color: var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(26,115,232,0.06);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 0 1.1rem 0;
+        }
+        .nav > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .nav img {
+            height: 44px;
+            width: 44px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.10);
+            margin-right: 14px;
+        }
+        .nav span {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+        }
+        .nav-links a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            color: var(--accent-orange);
+        }
+        .nav-links a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.2s;
+        }
+        .nav-links a:hover::after, .nav-links a:focus::after {
+            width: 80%;
+        }
+        main {
+            margin-top: 0;
+        }
+        .founder-card {
+            position: relative;
+            background: transparent;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(26, 115, 232, 0.10);
+            border: 1.5px solid rgba(30, 42, 73, 0.10);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 700px;
+            margin: 6.5rem auto 2.5rem auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-orange));
+            border-radius: 18px 18px 0 0;
+            z-index: 2;
+        }
+        .founder-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+        .founder-card::backdrop {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+        .founder-card > * {
+            position: relative;
+            z-index: 3;
+        }
+        .founder-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem auto;
+            border: 4px solid var(--primary-blue);
+            box-shadow: 0 2px 12px rgba(26,115,232,0.10);
+        }
+        .founder-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.7rem;
+        }
+        .founder-bio {
+            font-size: 1.05rem;
+            color: #222;
+            text-align: justify;
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        footer {
+            background: var(--deep-blue);
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent-green);
+        }
+        footer strong {
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        footer a {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .container { padding: 0 10px; }
+            .founder-card { padding: 1.2rem 0.5rem; }
+        }
+        @media (max-width: 600px) {
+            .founder-card { padding: 0.7rem 0.2rem; }
+            .founder-img { width: 80px; height: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+                    <img src="logo.png" alt="MFS Logo" style="height:44px;width:44px;margin-right:14px;">
+                    <span style="font-size:1.7rem;font-weight:700;color:var(--primary-blue);letter-spacing:0.5px;">Madras Fintech Services Pvt. Ltd</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="our-projects.html">Our Projects</a>
+                    <a href="#contact-footer">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="about-main container">
+        <h1>About</h1>
+        <div class="founder-card">
+            <img src="founder.jpg" alt="Dr Gautham Sekar" class="founder-img">
+            <div class="founder-name">Founder: Dr Gautham Sekar</div>
+            <div class="founder-bio">Madras Fintech Services Pvt. Ltd (CIN: U73100TN2019PTC133193; UDYAM-TN-02-0074212) was founded in December 2019 by Dr Gautham Sekar, an alumnus of BITS Pilani and KU Leuven. His interests span information security, financial technology, data science and philosophy. Prior to founding MFS, Dr Sekar worked in various capacities at leading universities and institutions such as the National University of Singapore, the Indian Statistical Institute and the Madras School of Economics. He has (co-)authored 20 publications, with several appearing in top venues such as Fast Software Encryption, CT-RSA, Information Security Conference, the Computer Journal, the Journal of Mathematical Cryptology and the Journal of Computer Security. Dr Sekar is a recipient of the Dr. Ranjit Singh Chauhan Undergraduate Research Award. A secure implementation of a 3GPP encryption standard that he co-developed has been included in the LTE/4G wireless standards.</div>
+        </div>
+    </main>
+    <footer id="contact-footer">
+        <div class="container">
+            <p>© 2025 Madras Fintech Services Private Ltd. All rights reserved.</p>
+            <div style="margin-top:1.2rem;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;">
+                <strong>CONTACT US</strong><br>
+                Address: Plot No. 14, F1, Syndicate Bank Colony<br>
+                Narayanapuram, Pallikaranai<br>
+                Chennai 600100, INDIA<br>
+                Phone: +91-8056267430<br>
+                E-mail: <a href="mailto:madrasfintech@gmail.com" style="color:inherit;text-decoration:underline;">madrasfintech@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
